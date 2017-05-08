@@ -8,7 +8,7 @@ var Link = require('react-router-dom').Link;
 const Player = (props) => {
   const info = props.profile;
   return (
-    <div className='playerView' style={{alignSelf:'baseline'}}>
+    <div className='playerView'>
       <h1>{props.label}</h1>
       <h2>Score: {props.score}</h2>
       <figure>
@@ -48,7 +48,7 @@ class Results extends React.Component {
         .then(e=>{
           if(!e){
             this.setState({
-              error:'Esto es un error, revisa si los usuarios existen en github',
+              error:'Error, check if the users exist in github',
               loading: false
             })
           }
@@ -69,9 +69,9 @@ class Results extends React.Component {
     if(error){
       return(
         <div className='battle'>
-          <p>{error}</p>
+          <h3>{error}</h3>
           <Link className='boton'
-            to='/battle'> Volver </Link>
+            to='/battle'> Go Back </Link>
         </div>
       )
     }
@@ -79,11 +79,11 @@ class Results extends React.Component {
       <div className='battle'>
         <div className='battle-item'>
           <Player
-            label='Winner'
+            label={winner.score!==loser.score?'Winner':'Tie'}
             score={winner.score}
             profile={winner.profile} />
           <Player
-            label='Loser'
+            label={winner.score!==loser.score?'Loser':'Tie'}
             score={loser.score}
             profile={loser.profile} />
         </div>

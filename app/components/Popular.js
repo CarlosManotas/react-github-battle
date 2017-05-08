@@ -30,7 +30,7 @@ const RepoGrid = (props) => {
               <ul className='lista-item-info'>
                 <li>{repo.name}</li>
                 <li>@{repo.owner.login}</li>
-                <li>{repo.stargazers_count} starts</li>
+                <li>{repo.stargazers_count} ★</li>
               </ul>
             </a>
           </li>
