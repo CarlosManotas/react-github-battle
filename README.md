@@ -3,13 +3,13 @@
 ### Github Battle ###
 >v.1.0.0
 
-###Que es esto?:
+### Que es esto?:
 * React
 * React router
 * Axios
 * Github Api
 
-> ¯\_(ツ)_/¯ .
+> ¯\\_(ツ)_/¯ .
 
 
 ### 1.Como empezar
@@ -43,4 +43,4 @@ yarn start
 
 License
 ------------
-The ¯\_(ツ)_/¯
+The ¯\\_(ツ)_/¯
